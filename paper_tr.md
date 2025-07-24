@@ -279,17 +279,17 @@ Bu proje, genel AI modellerinin rehberliğinde, az sayıda ama yüksek kaliteli 
 
 ### 7.2 Gelecek Araştırma Yönleri
 
-**Kısa Vadeli Planlar (6 ay):**
+
 - Aktif öğrenme döngüsünün entegrasyonu
 - Mobil cihazlara adaptasyon (iOS/Android)
 - Real-time inference optimizasyonu
 
-**Orta Vadeli Planlar (1 yıl):**
+
 - 3D jant segmentasyonu ve pose estimation
 - Çoklu araç parçası segmentasyonu (kapı, tampon, far vb.)
 - Video tabanlı temporal consistency iyileştirmeleri
 
-**Uzun Vadeli Vizyonlar (2+ yıl):**
+
 - Tıbbi görüntüleme uygulamaları
 - Drone/uydu görüntü analizi
 - Endüstriyel kalite kontrol sistemleri

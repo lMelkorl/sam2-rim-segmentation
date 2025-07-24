@@ -279,17 +279,17 @@ This project demonstrates how effective specialized AI models trained with small
 
 ### 7.2 Future Research Directions
 
-**Short-term Plans (6 months):**
+
 - Integration of active learning loop
 - Adaptation to mobile devices (iOS/Android)
 - Real-time inference optimization
 
-**Medium-term Plans (1 year):**
+
 - 3D rim segmentation and pose estimation
 - Multi-vehicle part segmentation (doors, bumpers, headlights, etc.)
 - Video-based temporal consistency improvements
 
-**Long-term Visions (2+ years):**
+
 - Medical imaging applications
 - Drone/satellite image analysis
 - Industrial quality control systems
