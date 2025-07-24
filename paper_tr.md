@@ -1,3 +1,11 @@
+---
+title: "SAM2 Destekli Yarı-Otomatik Veri Üretimi ile Jant Segmentasyonuna Yönelik Özel Model Eğitimi"
+author: "lMelkorl"
+date: "2025"
+type: "research-paper"
+language: "tr"
+---
+
 # SAM2 Destekli Yarı-Otomatik Veri Üretimi ile Jant Segmentasyonuna Yönelik Özel Model Eğitimi
 
 ## Özet

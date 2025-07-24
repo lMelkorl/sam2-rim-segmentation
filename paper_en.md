@@ -1,3 +1,11 @@
+---
+title: "SAM2-Powered Semi-Automated Data Generation for Vehicle Rim Segmentation"
+author: "lMelkorl"
+date: "2025"
+type: "research-paper"
+language: "en"
+---
+
 # SAM2-Powered Semi-Automated Data Generation for Vehicle Rim Segmentation and Custom Model Training
 
 ## Abstract
@@ -307,7 +315,7 @@ The project has been developed completely as open source and includes the follow
 - Automated dataset management tools
 - Comprehensive testing framework
 
-**Repository**: [github.com/lmelkorl/sam2-rim-segmentation](https://github.com/lmelkorl/sam2-rim-segmentation)
+**Repository**: [github.com/lMelkorl/sam2-rim-segmentation](https://github.com/lMelkorl/sam2-rim-segmentation)
 
 ---
 
