@@ -1,0 +1,19 @@
+{
+  "name": "Rim Segmentation Dataset",
+  "description": "Vehicle rim segmentation dataset",
+  "version": "1.0",
+  "created": "2025-07-21T13:24:09.371462",
+  "total_samples": 200,
+  "classes": [
+    "rim"
+  ],
+  "formats": [
+    "YOLO",
+    "COCO"
+  ],
+  "structure": {
+    "images/": "Crop images",
+    "masks/": "Binary masks",
+    "annotations/": "YOLO txt + COCO json"
+  }
+}

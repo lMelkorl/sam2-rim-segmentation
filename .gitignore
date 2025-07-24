@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Model weights and checkpoints
+*.pt
+*.pth
+checkpoints/*.pt
+runs/
+models/
+
+# Large datasets and temporary files
+rim_dataset/images/
+rim_dataset/crops/
+rim_dataset/masks/
+rim_dataset/approved/
+rim_dataset/final/images/
+rim_dataset/final/masks/
+rim_dataset/final/annotations/*.txt
+rim_dataset/labels/train/*.txt
+rim_dataset/labels/val/*.txt
+crop_training/images/
+crop_training/labels/
+# Keep config files
+!rim_dataset/*.yaml
+!rim_dataset/final/*.yaml
+!crop_training/*.yaml
+!rim_dataset/final/annotations/annotations.json
+!rim_dataset/final/dataset_info.json
+
+# Temporary files
+tmp/
+web_uploads/
+web_results/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# SAM2 demo files (large)
+sam2/
+sam2_demo/ 

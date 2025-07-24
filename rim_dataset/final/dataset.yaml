@@ -1,0 +1,7 @@
+# Rim Segmentation Dataset
+path: /Users/melkor/Desktop/modelyolo/rim_dataset/final
+train: images
+val: images  # Aynı klasör, eğitim sırasında split yapılacak
+
+nc: 1  # number of classes
+names: ['rim']  # class names

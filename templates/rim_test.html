@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Trained Rim Model Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .loading { display: none; }
+        .upload-area { border: 2px dashed #d1d5db; transition: all 0.3s ease; }
+        .upload-area.drag-over { border-color: #3b82f6; background-color: #eff6ff; }
+        .result-image { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .detection-type-btn.active { background-color: #3b82f6; color: white; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-bold mb-2">🎯 Trained Rim Model Test</h1>
+            <p class="text-xl opacity-90">Step1 (Wheel Detection) + Step2 (Trained Model) + Batch Processing</p>
+            <div class="mt-4 text-sm">
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full mr-2">🚀 YOLOv8m-seg</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full mr-2">📊 200 Samples</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full mr-2">⚡ Best Detection Only</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">📚 Batch Processing</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto p-6">
+        
+        <!-- Detection Type Selection -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">🔧 Detection Mode</h2>
+            <div class="flex flex-wrap gap-3">
+                <button id="btn-auto" class="detection-type-btn active px-4 py-2 rounded-lg border transition-colors">
+                    🤖 Auto (Smart Detection)
+                </button>
+                <button id="btn-full" class="detection-type-btn px-4 py-2 rounded-lg border transition-colors">
+                    🚗 Full Car (Step1 + Step2)
+                </button>
+                <button id="btn-crop" class="detection-type-btn px-4 py-2 rounded-lg border transition-colors">
+                    ✂️ Crop Only (Direct Model)
+                </button>
+                <button id="btn-batch" class="detection-type-btn px-4 py-2 rounded-lg border transition-colors bg-orange-100 border-orange-300">
+                    📚 Batch Mode (Multiple Images)
+                </button>
+            </div>
+            
+            <!-- Rim Replacement Mode -->
+            <div class="mt-4 p-4 bg-purple-50 rounded-lg border border-purple-200" id="replacementSection" style="display: none;">
+                <div class="flex items-center justify-between mb-3">
+                    <h3 class="text-lg font-semibold text-purple-800">🔄 Rim Replacement Mode</h3>
+                    <label class="flex items-center">
+                        <input type="checkbox" id="replacementModeToggle" class="mr-2">
+                        <span class="text-sm text-purple-700">Enable Replacement</span>
+                    </label>
+                </div>
+                <div id="replacementUpload" class="hidden">
+                    <p class="text-sm text-purple-600 mb-2">Upload replacement rim image:</p>
+                    <input type="file" id="replacementImageInput" accept="image/*" class="block w-full text-sm text-purple-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-100 file:text-purple-700 hover:file:bg-purple-200">
+                    <p class="text-xs text-purple-500 mt-1">The replacement rim will be automatically fitted to detected rim areas</p>
+                </div>
+            </div>
+            
+            <div class="mt-3 text-sm text-gray-600">
+                <p><strong>Auto:</strong> Automatically determines detection type</p>
+                <p><strong>Full Car:</strong> Detects wheels first, then rims (for full car images)</p>
+                <p><strong>Crop Only:</strong> Direct rim detection (for pre-cropped rim images)</p>
+                <p><strong>Batch:</strong> Process multiple images at once with summary results</p>
+                <p><strong>Rim Replacement:</strong> Replace detected rims with your custom rim image (Full Car mode only)</p>
+            </div>
+        </div>
+        
+        <!-- Upload Area -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">📤 Test Image Upload</h2>
+            
+            <div id="uploadArea" class="upload-area p-12 text-center rounded-lg cursor-pointer">
+                <div class="mb-4">
+                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <p class="text-lg text-gray-600 mb-2" id="uploadText">Drop test image here or click to upload</p>
+                <p class="text-sm text-gray-400" id="uploadSubtext">PNG, JPG, JPEG formats supported</p>
+                <input type="file" id="imageInput" accept="image/*" class="hidden">
+                <input type="file" id="batchInput" accept="image/*" multiple class="hidden">
+            </div>
+            
+            <div class="mt-4 text-center">
+                <button id="analyzeBtn" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    🔍 Run Detection
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <p class="text-lg text-gray-600">AI Model analyzing...</p>
+            <p class="text-sm text-gray-400 mt-2" id="loadingMessage">Processing image...</p>
+        </div>
+
+        <!-- Single Image Results -->
+        <div id="results" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">📊 Detection Results</h3>
+                <div id="detectionSummary" class="grid grid-cols-1 md:grid-cols-4 gap-4"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-gray-800">📷 Original Image</h4>
+                    <img id="originalImage" class="result-image w-full" />
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-gray-800">🎯 Detection Result</h4>
+                    <img id="resultImage" class="result-image w-full" />
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 mt-6">
+                <h4 class="text-lg font-semibold mb-4 text-gray-800">📋 Detection Details</h4>
+                <div id="detectionDetails" class="space-y-3"></div>
+            </div>
+        </div>
+
+        <!-- Batch Results -->
+        <div id="batchResults" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">📊 Batch Processing Summary</h3>
+                <div id="batchSummary" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6"></div>
+                <div id="batchProgress" class="w-full bg-gray-200 rounded-full h-2">
+                    <div id="batchProgressBar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold mb-4 text-gray-800">🖼️ Individual Results</h4>
+                <div id="batchResultsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const imageInput = document.getElementById('imageInput');
+        const batchInput = document.getElementById('batchInput');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+        const batchResults = document.getElementById('batchResults');
+        
+        let selectedFile = null;
+        let selectedFiles = [];
+        let selectedDetectionType = 'auto';
+        let isBatchMode = false;
+        let replacementMode = false;
+        let replacementFile = null;
+
+        // Detection type buttons
+        const detectionTypeBtns = document.querySelectorAll('.detection-type-btn');
+        detectionTypeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                detectionTypeBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                if (this.id === 'btn-auto') {
+                    selectedDetectionType = 'auto';
+                    isBatchMode = false;
+                } else if (this.id === 'btn-full') {
+                    selectedDetectionType = 'full';
+                    isBatchMode = false;
+                } else if (this.id === 'btn-crop') {
+                    selectedDetectionType = 'crop';
+                    isBatchMode = false;
+                } else if (this.id === 'btn-batch') {
+                    selectedDetectionType = 'auto';
+                    isBatchMode = true;
+                }
+                
+                updateUploadAreaMode();
+                resetFileSelection();
+                updateReplacementSection();
+            });
+        });
+
+        // Replacement mode controls
+        const replacementModeToggle = document.getElementById('replacementModeToggle');
+        const replacementUpload = document.getElementById('replacementUpload');
+        const replacementImageInput = document.getElementById('replacementImageInput');
+
+        replacementModeToggle.addEventListener('change', function() {
+            replacementMode = this.checked;
+            if (replacementMode) {
+                replacementUpload.classList.remove('hidden');
+                replacementUpload.classList.add('block');
+            } else {
+                replacementUpload.classList.add('hidden');
+                replacementUpload.classList.remove('block');
+                replacementFile = null;
+                replacementImageInput.value = '';
+            }
+        });
+
+        replacementImageInput.addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                replacementFile = e.target.files[0];
+            }
+        });
+
+        function updateReplacementSection() {
+            const replacementSection = document.getElementById('replacementSection');
+            // Show replacement section only for full car modes (not batch or crop)
+            if ((selectedDetectionType === 'auto' || selectedDetectionType === 'full') && !isBatchMode) {
+                replacementSection.style.display = 'block';
+            } else {
+                replacementSection.style.display = 'none';
+                replacementModeToggle.checked = false;
+                replacementMode = false;
+                replacementUpload.classList.add('hidden');
+                replacementUpload.classList.remove('block');
+                replacementFile = null;
+                replacementImageInput.value = '';
+            }
+        }
+
+        function updateUploadAreaMode() {
+            const uploadText = document.getElementById('uploadText');
+            const uploadSubtext = document.getElementById('uploadSubtext');
+            
+            if (isBatchMode) {
+                uploadText.textContent = 'Drop multiple images here or click to upload';
+                uploadSubtext.textContent = 'Select multiple PNG, JPG, JPEG files for batch processing';
+                analyzeBtn.textContent = '🔍 Run Batch Detection';
+            } else {
+                uploadText.textContent = 'Drop test image here or click to upload';
+                uploadSubtext.textContent = 'PNG, JPG, JPEG formats supported';
+                analyzeBtn.textContent = '🔍 Run Detection';
+            }
+        }
+
+        function resetFileSelection() {
+            selectedFile = null;
+            selectedFiles = [];
+            analyzeBtn.disabled = true;
+            results.classList.add('hidden');
+            batchResults.classList.add('hidden');
+        }
+
+        // Upload events
+        uploadArea.addEventListener('click', () => {
+            if (isBatchMode) batchInput.click();
+            else imageInput.click();
+        });
+        
+        uploadArea.addEventListener('dragover', e => {
+            e.preventDefault();
+            uploadArea.classList.add('drag-over');
+        });
+        
+        uploadArea.addEventListener('dragleave', e => {
+            e.preventDefault();
+            uploadArea.classList.remove('drag-over');
+        });
+        
+        uploadArea.addEventListener('drop', e => {
+            e.preventDefault();
+            uploadArea.classList.remove('drag-over');
+            
+            const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+            if (files.length > 0) {
+                if (isBatchMode) {
+                    selectedFiles = files;
+                    updateBatchUploadArea();
+                } else {
+                    selectedFile = files[0];
+                    updateSingleUploadArea();
+                }
+            }
+        });
+
+        imageInput.addEventListener('change', e => {
+            if (e.target.files.length > 0) {
+                selectedFile = e.target.files[0];
+                updateSingleUploadArea();
+            }
+        });
+
+        batchInput.addEventListener('change', e => {
+            if (e.target.files.length > 0) {
+                selectedFiles = Array.from(e.target.files);
+                updateBatchUploadArea();
+            }
+        });
+
+        function updateSingleUploadArea() {
+            uploadArea.innerHTML = `
+                <div class="mb-4">
+                    <svg class="mx-auto h-12 w-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <p class="text-lg text-green-600 font-semibold">${selectedFile.name}</p>
+                <p class="text-sm text-gray-500">${(selectedFile.size / 1024 / 1024).toFixed(2)} MB</p>
+                <p class="text-xs text-blue-600 mt-2">Detection Mode: ${selectedDetectionType.toUpperCase()}</p>
+            `;
+            analyzeBtn.disabled = false;
+        }
+
+        function updateBatchUploadArea() {
+            const totalSize = selectedFiles.reduce((sum, f) => sum + f.size, 0);
+            uploadArea.innerHTML = `
+                <div class="mb-4">
+                    <svg class="mx-auto h-12 w-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                </div>
+                <p class="text-lg text-orange-600 font-semibold">${selectedFiles.length} files selected</p>
+                <p class="text-sm text-gray-500">${(totalSize / 1024 / 1024).toFixed(2)} MB total</p>
+                <p class="text-xs text-blue-600 mt-2">Batch Mode: ${selectedDetectionType.toUpperCase()}</p>
+            `;
+            analyzeBtn.disabled = false;
+        }
+
+        analyzeBtn.addEventListener('click', () => {
+            if (isBatchMode) processBatch();
+            else analyzeSingleImage();
+        });
+
+        async function analyzeSingleImage() {
+            if (!selectedFile) return;
+
+            loading.style.display = 'block';
+            results.classList.add('hidden');
+            batchResults.classList.add('hidden');
+            analyzeBtn.disabled = true;
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (selectedDetectionType === 'full' || selectedDetectionType === 'auto') {
+                loadingMessage.textContent = 'Step 1: Detecting wheels... Step 2: Analyzing rims...';
+            } else {
+                loadingMessage.textContent = 'Analyzing rim crop...';
+            }
+
+            const formData = new FormData();
+            formData.append('image', selectedFile);
+            formData.append('type', selectedDetectionType);
+            formData.append('replacement_mode', replacementMode.toString());
+            
+            console.log('🔄 Detection settings:');
+            console.log('- Detection type:', selectedDetectionType);
+            console.log('- Replacement mode:', replacementMode);
+            console.log('- Replacement file:', replacementFile);
+            
+            if (replacementMode && replacementFile) {
+                formData.append('replacement_image', replacementFile);
+                console.log('✅ Replacement image added to FormData:', replacementFile.name, replacementFile.size, 'bytes');
+            } else if (replacementMode) {
+                console.log('❌ Replacement mode enabled but no file selected!');
+            }
+
+            try {
+                const response = await fetch('/api/detect', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                if (data.success) displaySingleResults(data);
+                else alert('Error: ' + data.error);
+            } catch (error) {
+                alert('Analysis error: ' + error.message);
+            } finally {
+                loading.style.display = 'none';
+                analyzeBtn.disabled = false;
+            }
+        }
+
+        async function processBatch() {
+            if (!selectedFiles.length) return;
+
+            loading.style.display = 'block';
+            results.classList.add('hidden');
+            batchResults.classList.add('hidden');
+            analyzeBtn.disabled = true;
+
+            document.getElementById('loadingMessage').textContent = `Processing ${selectedFiles.length} images in batch...`;
+
+            const formData = new FormData();
+            selectedFiles.forEach(file => formData.append('images', file));
+            formData.append('type', selectedDetectionType);
+
+            try {
+                const response = await fetch('/api/batch_detect', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                if (data.success) displayBatchResults(data);
+                else alert('Error: ' + data.error);
+            } catch (error) {
+                alert('Batch processing error: ' + error.message);
+            } finally {
+                loading.style.display = 'none';
+                analyzeBtn.disabled = false;
+            }
+        }
+
+        function displaySingleResults(data) {
+            let modeIcon, modeText;
+            if (data.detection_type === 'crop') {
+                modeIcon = '✂️';
+                modeText = 'Crop Mode';
+            } else if (data.replacement_mode) {
+                modeIcon = '🔄';
+                modeText = 'Rim Replacement';
+            } else {
+                modeIcon = '🚗';
+                modeText = 'Full Pipeline';
+            }
+            
+            const summaryHTML = `
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-blue-600">${data.detections_count}</div>
+                    <div class="text-sm text-gray-600">Detected Rims</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-green-600">${data.detections_count > 0 ? '✅' : '❌'}</div>
+                    <div class="text-sm text-gray-600">${data.detections_count > 0 ? 'Success' : 'No Detection'}</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <div class="text-2xl font-bold text-purple-600">${modeIcon}</div>
+                    <div class="text-sm text-gray-600">${modeText}</div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                    <div class="text-xl font-bold text-gray-600">${data.timestamp}</div>
+                    <div class="text-sm text-gray-600">Timestamp</div>
+                </div>
+            `;
+            document.getElementById('detectionSummary').innerHTML = summaryHTML;
+
+            document.getElementById('originalImage').src = URL.createObjectURL(selectedFile);
+            document.getElementById('resultImage').src = data.result_image;
+
+            let detailsHTML = '';
+            if (data.detections_count > 0) {
+                data.detections.forEach((det, index) => {
+                    const wheelInfo = det.wheel_region_id >= 0 ? 
+                        `<div>🎯 Wheel Region: ${det.wheel_region_id}</div>` : '';
+                    
+                    detailsHTML += `
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Best Rim Detection</span>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">
+                                    Confidence: ${(det.confidence * 100).toFixed(1)}%
+                                </span>
+                            </div>
+                            <div class="text-sm text-gray-600">
+                                <div>📍 Center: (${det.center[0]}, ${det.center[1]})</div>
+                                <div>📐 Area: ${det.area.toLocaleString()} pixels</div>
+                                <div>📦 BBox: [${det.box.join(', ')}]</div>
+                                ${wheelInfo}
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                detailsHTML = `
+                    <div class="bg-yellow-50 p-4 rounded-lg text-center">
+                        <p class="text-yellow-700 mb-2">❌ No rims detected in this image</p>
+                        <div class="text-sm text-yellow-600">
+                            <p class="font-semibold mb-1">Suggestions:</p>
+                            <p>• Make sure the image contains clear rims/wheels</p>
+                            <p>• Try different detection modes</p>
+                            <p>• Check image quality and lighting</p>
+                        </div>
+                    </div>
+                `;
+            }
+            document.getElementById('detectionDetails').innerHTML = detailsHTML;
+            results.classList.remove('hidden');
+        }
+
+        function displayBatchResults(data) {
+            const summary = data.batch_summary;
+            const summaryHTML = `
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-blue-600">${summary.total_images}</div>
+                    <div class="text-sm text-gray-600">Total Images</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-green-600">${summary.successful_detections}</div>
+                    <div class="text-sm text-gray-600">Successful Detections</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-purple-600">${summary.total_rims_detected}</div>
+                    <div class="text-sm text-gray-600">Total Rims</div>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                    <div class="text-2xl font-bold text-orange-600">${summary.success_rate}</div>
+                    <div class="text-sm text-gray-600">Success Rate</div>
+                </div>
+            `;
+            document.getElementById('batchSummary').innerHTML = summaryHTML;
+            document.getElementById('batchProgressBar').style.width = '100%';
+
+            let gridHTML = '';
+            data.results.forEach(result => {
+                const statusColor = result.status === 'success' ? 'green' : 
+                                  result.status === 'no_detection' ? 'yellow' : 'red';
+                const statusIcon = result.status === 'success' ? '✅' : 
+                                 result.status === 'no_detection' ? '⚠️' : '❌';
+
+                gridHTML += `
+                    <div class="border rounded-lg p-4 ${statusColor === 'green' ? 'bg-green-50 border-green-200' : 
+                                                        statusColor === 'yellow' ? 'bg-yellow-50 border-yellow-200' : 
+                                                        'bg-red-50 border-red-200'}">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold text-sm truncate">${result.filename}</span>
+                            <span class="text-lg">${statusIcon}</span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            <p>Detections: ${result.detections_count}</p>
+                            ${result.detections.length > 0 ? 
+                              `<p>Confidence: ${(result.detections[0].confidence * 100).toFixed(1)}%</p>` : 
+                              result.status === 'error' ? `<p class="text-red-600">${result.error}</p>` : ''}
+                        </div>
+                        ${result.result_image ? 
+                          `<img src="${result.result_image}" class="w-full h-32 object-cover rounded mt-2" alt="Result">` : 
+                          ''}
+                    </div>
+                `;
+            });
+            document.getElementById('batchResultsGrid').innerHTML = gridHTML;
+            batchResults.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html> 

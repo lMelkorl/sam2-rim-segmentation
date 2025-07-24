@@ -1,0 +1,6 @@
+names:
+- rim
+nc: 1
+path: /Users/melkor/Desktop/modelyolo/crop_training
+train: images/train
+val: images/val

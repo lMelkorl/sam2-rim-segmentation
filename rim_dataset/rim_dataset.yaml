@@ -1,0 +1,6 @@
+path: /Users/melkor/Desktop/modelyolo/rim_dataset
+train: images/train
+val: images/val
+
+names:
+  0: rim

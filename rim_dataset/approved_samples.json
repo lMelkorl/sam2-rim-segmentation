@@ -1,0 +1,1257 @@
+{
+  "1_2": {
+    "variant": "coarse",
+    "date": "2025-07-20T19:48:27.885628",
+    "approved_by": "user"
+  },
+  "1_1": {
+    "variant": "coarse",
+    "date": "2025-07-20T19:48:31.367765",
+    "approved_by": "user"
+  },
+  "3_1": {
+    "variant": "hough",
+    "date": "2025-07-20T19:48:59.567818",
+    "approved_by": "user"
+  },
+  "3_2": {
+    "variant": "coarse",
+    "date": "2025-07-20T19:49:11.303462",
+    "approved_by": "user"
+  },
+  "4_2": {
+    "variant": "hough",
+    "date": "2025-07-20T19:57:27.088765",
+    "approved_by": "user"
+  },
+  "10_2": {
+    "variant": "coarse",
+    "date": "2025-07-20T20:09:23.649304",
+    "approved_by": "user"
+  },
+  "10_1": {
+    "variant": "coarse",
+    "date": "2025-07-20T20:09:24.249774",
+    "approved_by": "user"
+  },
+  "11_1": {
+    "variant": "hough",
+    "date": "2025-07-20T20:18:32.569474",
+    "approved_by": "user"
+  },
+  "13_2": {
+    "variant": "hough",
+    "date": "2025-07-20T20:37:01.400908",
+    "approved_by": "user"
+  },
+  "2_2": {
+    "variant": "manual",
+    "date": "2025-07-20T20:52:10.783755",
+    "approved_by": "user"
+  },
+  "2_1": {
+    "variant": "manual",
+    "date": "2025-07-20T20:53:22.061901",
+    "approved_by": "user"
+  },
+  "4_1": {
+    "variant": "manual",
+    "date": "2025-07-20T20:54:19.320968",
+    "approved_by": "user"
+  },
+  "6_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:02:44.952337",
+    "approved_by": "user"
+  },
+  "5_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:02:46.638280",
+    "approved_by": "user"
+  },
+  "5_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:02:49.417313",
+    "approved_by": "user"
+  },
+  "6_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:02:52.769580",
+    "approved_by": "user"
+  },
+  "7_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:03:33.402640",
+    "approved_by": "user"
+  },
+  "7_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:03:34.211861",
+    "approved_by": "user"
+  },
+  "8_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:03:45.718292",
+    "approved_by": "user"
+  },
+  "8_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:03:57.246202",
+    "approved_by": "user"
+  },
+  "9_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:04:17.215524",
+    "approved_by": "user"
+  },
+  "9_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:04:30.872978",
+    "approved_by": "user"
+  },
+  "11_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:05:16.115662",
+    "approved_by": "user"
+  },
+  "12_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:05:20.531846",
+    "approved_by": "user"
+  },
+  "13_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:05:38.243700",
+    "approved_by": "user"
+  },
+  "14_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:05:42.150105",
+    "approved_by": "user"
+  },
+  "14_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:05:42.685665",
+    "approved_by": "user"
+  },
+  "15_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:06:13.134024",
+    "approved_by": "user"
+  },
+  "15_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:06:16.720397",
+    "approved_by": "user"
+  },
+  "16_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:06:40.897178",
+    "approved_by": "user"
+  },
+  "16_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:06:52.836408",
+    "approved_by": "user"
+  },
+  "17_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:06:59.158932",
+    "approved_by": "user"
+  },
+  "17_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:07:10.809775",
+    "approved_by": "user"
+  },
+  "18_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:07:23.108726",
+    "approved_by": "user"
+  },
+  "19_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:07:34.703278",
+    "approved_by": "user"
+  },
+  "19_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:07:35.418082",
+    "approved_by": "user"
+  },
+  "20_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:08:04.476292",
+    "approved_by": "user"
+  },
+  "20_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:08:25.734878",
+    "approved_by": "user"
+  },
+  "21_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:09:16.146742",
+    "approved_by": "user"
+  },
+  "22_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:09:16.719967",
+    "approved_by": "user"
+  },
+  "22_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:09:20.271409",
+    "approved_by": "user"
+  },
+  "23_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:11:56.641950",
+    "approved_by": "user"
+  },
+  "23_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:13:50.591885",
+    "approved_by": "user"
+  },
+  "24_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:20:47.756426",
+    "approved_by": "user"
+  },
+  "25_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:32:03.937982",
+    "approved_by": "user"
+  },
+  "25_1": {
+    "variant": "manual",
+    "date": "2025-07-20T21:32:19.619904",
+    "approved_by": "user"
+  },
+  "26_1": {
+    "variant": "refined",
+    "date": "2025-07-20T21:37:36.769728",
+    "approved_by": "user"
+  },
+  "27_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:47:40.460820",
+    "approved_by": "user"
+  },
+  "27_2": {
+    "variant": "coarse",
+    "date": "2025-07-20T21:47:41.152963",
+    "approved_by": "user"
+  },
+  "28_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:47:49.882623",
+    "approved_by": "user"
+  },
+  "18_2": {
+    "variant": "manual",
+    "date": "2025-07-20T21:50:21.878887",
+    "approved_by": "user"
+  },
+  "29_1": {
+    "variant": "hough",
+    "date": "2025-07-20T21:53:01.104802",
+    "approved_by": "user"
+  },
+  "29_2": {
+    "variant": "hough",
+    "date": "2025-07-20T21:55:53.317446",
+    "approved_by": "user"
+  },
+  "30_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:00:45.974492",
+    "approved_by": "user"
+  },
+  "30_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:00:46.673908",
+    "approved_by": "user"
+  },
+  "31_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:07:37.208822",
+    "approved_by": "user"
+  },
+  "31_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:07:38.525947",
+    "approved_by": "user"
+  },
+  "32_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:18:26.732110",
+    "approved_by": "user"
+  },
+  "32_1": {
+    "variant": "manual",
+    "date": "2025-07-20T22:18:28.160507",
+    "approved_by": "user"
+  },
+  "33_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:18:41.111141",
+    "approved_by": "user"
+  },
+  "33_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:18:47.764794",
+    "approved_by": "user"
+  },
+  "34_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:18:48.311216",
+    "approved_by": "user"
+  },
+  "34_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:18:51.377126",
+    "approved_by": "user"
+  },
+  "35_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:19:00.737861",
+    "approved_by": "user"
+  },
+  "35_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:19:01.384521",
+    "approved_by": "user"
+  },
+  "36_2": {
+    "variant": "manual",
+    "date": "2025-07-20T22:19:14.252970",
+    "approved_by": "user"
+  },
+  "37_2": {
+    "variant": "manual",
+    "date": "2025-07-20T22:19:50.041924",
+    "approved_by": "user"
+  },
+  "37_1": {
+    "variant": "manual",
+    "date": "2025-07-20T22:19:55.465242",
+    "approved_by": "user"
+  },
+  "38_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:19:59.899669",
+    "approved_by": "user"
+  },
+  "38_2": {
+    "variant": "manual",
+    "date": "2025-07-20T22:20:13.740275",
+    "approved_by": "user"
+  },
+  "40_1": {
+    "variant": "manual",
+    "date": "2025-07-20T22:22:56.147260",
+    "approved_by": "user"
+  },
+  "40_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:23:00.494140",
+    "approved_by": "user"
+  },
+  "41_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:25:44.591807",
+    "approved_by": "user"
+  },
+  "41_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:25:50.392070",
+    "approved_by": "user"
+  },
+  "42_2": {
+    "variant": "coarse",
+    "date": "2025-07-20T22:26:51.013987",
+    "approved_by": "user"
+  },
+  "42_1": {
+    "variant": "manual",
+    "date": "2025-07-20T22:27:04.184736",
+    "approved_by": "user"
+  },
+  "43_1": {
+    "variant": "hough",
+    "date": "2025-07-20T22:30:03.145696",
+    "approved_by": "user"
+  },
+  "43_2": {
+    "variant": "manual",
+    "date": "2025-07-20T22:31:33.212781",
+    "approved_by": "user"
+  },
+  "44_1": {
+    "variant": "manual",
+    "date": "2025-07-20T22:33:21.231890",
+    "approved_by": "user"
+  },
+  "44_2": {
+    "variant": "hough",
+    "date": "2025-07-20T22:33:24.448752",
+    "approved_by": "user"
+  },
+  "49_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:09:54.495120",
+    "approved_by": "user"
+  },
+  "49_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:09:55.299765",
+    "approved_by": "user"
+  },
+  "50_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:09:55.899941",
+    "approved_by": "user"
+  },
+  "51_2": {
+    "variant": "refined",
+    "date": "2025-07-20T23:09:57.554655",
+    "approved_by": "user"
+  },
+  "50_2": {
+    "variant": "manual",
+    "date": "2025-07-20T23:10:10.719708",
+    "approved_by": "user"
+  },
+  "45_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:10:22.820110",
+    "approved_by": "user"
+  },
+  "45_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:10:23.196987",
+    "approved_by": "user"
+  },
+  "46_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:10:25.918654",
+    "approved_by": "user"
+  },
+  "46_2": {
+    "variant": "manual",
+    "date": "2025-07-20T23:10:38.588626",
+    "approved_by": "user"
+  },
+  "47_1": {
+    "variant": "refined",
+    "date": "2025-07-20T23:10:45.878883",
+    "approved_by": "user"
+  },
+  "48_2": {
+    "variant": "manual",
+    "date": "2025-07-20T23:11:04.634991",
+    "approved_by": "user"
+  },
+  "48_1": {
+    "variant": "manual",
+    "date": "2025-07-20T23:11:19.461912",
+    "approved_by": "user"
+  },
+  "51_1": {
+    "variant": "refined",
+    "date": "2025-07-20T23:11:25.993546",
+    "approved_by": "user"
+  },
+  "52_2": {
+    "variant": "coarse",
+    "date": "2025-07-20T23:18:17.833794",
+    "approved_by": "user"
+  },
+  "53_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:21:31.869758",
+    "approved_by": "user"
+  },
+  "53_1": {
+    "variant": "manual",
+    "date": "2025-07-20T23:21:32.488838",
+    "approved_by": "user"
+  },
+  "54_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:26:37.970618",
+    "approved_by": "user"
+  },
+  "54_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:30:39.653994",
+    "approved_by": "user"
+  },
+  "55_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:36:09.919343",
+    "approved_by": "user"
+  },
+  "55_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:38:52.165489",
+    "approved_by": "user"
+  },
+  "57_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:47:43.649208",
+    "approved_by": "user"
+  },
+  "57_1": {
+    "variant": "hough",
+    "date": "2025-07-20T23:47:44.209729",
+    "approved_by": "user"
+  },
+  "56_1": {
+    "variant": "manual",
+    "date": "2025-07-20T23:48:07.826348",
+    "approved_by": "user"
+  },
+  "56_2": {
+    "variant": "manual",
+    "date": "2025-07-20T23:48:23.432469",
+    "approved_by": "user"
+  },
+  "58_2": {
+    "variant": "manual",
+    "date": "2025-07-20T23:55:21.302014",
+    "approved_by": "user"
+  },
+  "58_1": {
+    "variant": "manual",
+    "date": "2025-07-20T23:55:21.853079",
+    "approved_by": "user"
+  },
+  "59_2": {
+    "variant": "hough",
+    "date": "2025-07-20T23:55:28.110145",
+    "approved_by": "user"
+  },
+  "59_1": {
+    "variant": "manual",
+    "date": "2025-07-20T23:56:27.088744",
+    "approved_by": "user"
+  },
+  "61_1": {
+    "variant": "manual",
+    "date": "2025-07-21T00:01:36.435773",
+    "approved_by": "user"
+  },
+  "61_2": {
+    "variant": "manual",
+    "date": "2025-07-21T00:03:08.960151",
+    "approved_by": "user"
+  },
+  "62_2": {
+    "variant": "hough",
+    "date": "2025-07-21T00:57:24.495622",
+    "approved_by": "user"
+  },
+  "62_1": {
+    "variant": "hough",
+    "date": "2025-07-21T00:57:28.049472",
+    "approved_by": "user"
+  },
+  "63_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:23:08.141961",
+    "approved_by": "user"
+  },
+  "63_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:23:08.854899",
+    "approved_by": "user"
+  },
+  "64_2": {
+    "variant": "manual",
+    "date": "2025-07-21T01:23:56.879489",
+    "approved_by": "user"
+  },
+  "64_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:24:26.134688",
+    "approved_by": "user"
+  },
+  "65_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:24:34.679969",
+    "approved_by": "user"
+  },
+  "65_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:24:35.214130",
+    "approved_by": "user"
+  },
+  "66_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:24:54.399646",
+    "approved_by": "user"
+  },
+  "67_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:34:35.247498",
+    "approved_by": "user"
+  },
+  "67_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:35:01.874823",
+    "approved_by": "user"
+  },
+  "68_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:35:20.007307",
+    "approved_by": "user"
+  },
+  "68_2": {
+    "variant": "manual",
+    "date": "2025-07-21T01:35:33.251796",
+    "approved_by": "user"
+  },
+  "69_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:35:42.371901",
+    "approved_by": "user"
+  },
+  "69_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:35:42.959236",
+    "approved_by": "user"
+  },
+  "71_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:35:50.840749",
+    "approved_by": "user"
+  },
+  "71_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:35:51.355789",
+    "approved_by": "user"
+  },
+  "72_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:36:22.910553",
+    "approved_by": "user"
+  },
+  "73_2": {
+    "variant": "refined",
+    "date": "2025-07-21T01:36:39.673788",
+    "approved_by": "user"
+  },
+  "73_1": {
+    "variant": "refined",
+    "date": "2025-07-21T01:36:40.300679",
+    "approved_by": "user"
+  },
+  "74_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:37:13.785151",
+    "approved_by": "user"
+  },
+  "74_2": {
+    "variant": "manual",
+    "date": "2025-07-21T01:38:11.650372",
+    "approved_by": "user"
+  },
+  "75_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:38:25.711163",
+    "approved_by": "user"
+  },
+  "75_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:38:26.195809",
+    "approved_by": "user"
+  },
+  "76_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:38:28.271799",
+    "approved_by": "user"
+  },
+  "76_2": {
+    "variant": "hough",
+    "date": "2025-07-21T01:38:28.776521",
+    "approved_by": "user"
+  },
+  "77_1": {
+    "variant": "manual",
+    "date": "2025-07-21T01:41:33.434686",
+    "approved_by": "user"
+  },
+  "77_2": {
+    "variant": "manual",
+    "date": "2025-07-21T01:41:34.006473",
+    "approved_by": "user"
+  },
+  "78_1": {
+    "variant": "hough",
+    "date": "2025-07-21T01:43:58.820109",
+    "approved_by": "user"
+  },
+  "79_2": {
+    "variant": "manual",
+    "date": "2025-07-21T10:58:29.464786",
+    "approved_by": "user"
+  },
+  "80_2": {
+    "variant": "hough",
+    "date": "2025-07-21T10:58:36.653841",
+    "approved_by": "user"
+  },
+  "80_1": {
+    "variant": "manual",
+    "date": "2025-07-21T10:59:10.862296",
+    "approved_by": "user"
+  },
+  "82_2": {
+    "variant": "hough",
+    "date": "2025-07-21T10:59:17.091384",
+    "approved_by": "user"
+  },
+  "82_1": {
+    "variant": "hough",
+    "date": "2025-07-21T10:59:17.652365",
+    "approved_by": "user"
+  },
+  "81_2": {
+    "variant": "manual",
+    "date": "2025-07-21T10:59:32.604414",
+    "approved_by": "user"
+  },
+  "83_2": {
+    "variant": "manual",
+    "date": "2025-07-21T10:59:44.352722",
+    "approved_by": "user"
+  },
+  "83_1": {
+    "variant": "hough",
+    "date": "2025-07-21T10:59:53.057229",
+    "approved_by": "user"
+  },
+  "84_1": {
+    "variant": "manual",
+    "date": "2025-07-21T11:00:11.410265",
+    "approved_by": "user"
+  },
+  "84_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:00:12.007758",
+    "approved_by": "user"
+  },
+  "85_2": {
+    "variant": "manual",
+    "date": "2025-07-21T11:01:08.946733",
+    "approved_by": "user"
+  },
+  "86_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:01:14.601545",
+    "approved_by": "user"
+  },
+  "85_1": {
+    "variant": "manual",
+    "date": "2025-07-21T11:02:02.915958",
+    "approved_by": "user"
+  },
+  "86_1": {
+    "variant": "manual",
+    "date": "2025-07-21T11:02:30.441536",
+    "approved_by": "user"
+  },
+  "87_1": {
+    "variant": "manual",
+    "date": "2025-07-21T11:02:49.537850",
+    "approved_by": "user"
+  },
+  "94_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:06.798133",
+    "approved_by": "user"
+  },
+  "94_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:07.405964",
+    "approved_by": "user"
+  },
+  "96_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:17.603703",
+    "approved_by": "user"
+  },
+  "97_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:18.232375",
+    "approved_by": "user"
+  },
+  "116_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:34.221769",
+    "approved_by": "user"
+  },
+  "116_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:34.694910",
+    "approved_by": "user"
+  },
+  "115_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:40.106148",
+    "approved_by": "user"
+  },
+  "111_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:45.045968",
+    "approved_by": "user"
+  },
+  "111_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:45.511287",
+    "approved_by": "user"
+  },
+  "109_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:03:49.811578",
+    "approved_by": "user"
+  },
+  "108_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:01.031765",
+    "approved_by": "user"
+  },
+  "109_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:01.842954",
+    "approved_by": "user"
+  },
+  "108_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:02.305018",
+    "approved_by": "user"
+  },
+  "106_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:06.706629",
+    "approved_by": "user"
+  },
+  "103_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:13.543244",
+    "approved_by": "user"
+  },
+  "104_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:14.320045",
+    "approved_by": "user"
+  },
+  "102_1": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:23.098287",
+    "approved_by": "user"
+  },
+  "103_2": {
+    "variant": "hough",
+    "date": "2025-07-21T11:04:23.680756",
+    "approved_by": "user"
+  },
+  "87_2": {
+    "variant": "manual",
+    "date": "2025-07-21T11:04:47.475854",
+    "approved_by": "user"
+  },
+  "88_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:27:35.999172",
+    "approved_by": "user"
+  },
+  "88_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:27:55.650419",
+    "approved_by": "user"
+  },
+  "89_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:28:12.510883",
+    "approved_by": "user"
+  },
+  "89_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:28:27.281344",
+    "approved_by": "user"
+  },
+  "90_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:28:59.331146",
+    "approved_by": "user"
+  },
+  "90_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:28:59.904618",
+    "approved_by": "user"
+  },
+  "92_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:29:26.506413",
+    "approved_by": "user"
+  },
+  "92_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:29:38.368311",
+    "approved_by": "user"
+  },
+  "91_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:29:39.068554",
+    "approved_by": "user"
+  },
+  "93_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:29:57.695270",
+    "approved_by": "user"
+  },
+  "95_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:30:12.250236",
+    "approved_by": "user"
+  },
+  "96_1": {
+    "variant": "refined",
+    "date": "2025-07-21T12:30:19.918968",
+    "approved_by": "user"
+  },
+  "95_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:30:33.333318",
+    "approved_by": "user"
+  },
+  "100_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:30:53.686916",
+    "approved_by": "user"
+  },
+  "100_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:31:04.130204",
+    "approved_by": "user"
+  },
+  "99_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:31:21.081011",
+    "approved_by": "user"
+  },
+  "99_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:31:48.845986",
+    "approved_by": "user"
+  },
+  "101_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:32:25.523176",
+    "approved_by": "user"
+  },
+  "101_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:32:45.769675",
+    "approved_by": "user"
+  },
+  "104_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:32:57.019112",
+    "approved_by": "user"
+  },
+  "105_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:34:12.650904",
+    "approved_by": "user"
+  },
+  "106_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:34:32.331259",
+    "approved_by": "user"
+  },
+  "107_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:35:11.833824",
+    "approved_by": "user"
+  },
+  "112_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:35:31.512105",
+    "approved_by": "user"
+  },
+  "115_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:35:51.480813",
+    "approved_by": "user"
+  },
+  "114_2": {
+    "variant": "manual",
+    "date": "2025-07-21T12:37:09.444434",
+    "approved_by": "user"
+  },
+  "114_1": {
+    "variant": "manual",
+    "date": "2025-07-21T12:37:09.924851",
+    "approved_by": "user"
+  },
+  "117_1": {
+    "variant": "hough",
+    "date": "2025-07-22T01:46:03.098473",
+    "approved_by": "user"
+  },
+  "117_2": {
+    "variant": "hough",
+    "date": "2025-07-22T01:46:03.644087",
+    "approved_by": "user"
+  },
+  "118_2": {
+    "variant": "hough",
+    "date": "2025-07-22T01:51:46.229202",
+    "approved_by": "user"
+  },
+  "119_2": {
+    "variant": "hough",
+    "date": "2025-07-22T01:51:46.764323",
+    "approved_by": "user"
+  },
+  "119_1": {
+    "variant": "hough",
+    "date": "2025-07-22T01:51:47.458542",
+    "approved_by": "user"
+  },
+  "118_1": {
+    "variant": "manual",
+    "date": "2025-07-22T12:53:01.294668",
+    "approved_by": "user"
+  },
+  "120_1": {
+    "variant": "manual",
+    "date": "2025-07-22T12:53:39.700528",
+    "approved_by": "user"
+  },
+  "121_1": {
+    "variant": "manual",
+    "date": "2025-07-22T13:16:07.269334",
+    "approved_by": "user"
+  },
+  "122_2": {
+    "variant": "manual",
+    "date": "2025-07-22T13:17:56.337779",
+    "approved_by": "user"
+  },
+  "122_1": {
+    "variant": "manual",
+    "date": "2025-07-22T13:18:10.946036",
+    "approved_by": "user"
+  },
+  "123_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:29:21.809169",
+    "approved_by": "user"
+  },
+  "123_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:30:03.778313",
+    "approved_by": "user"
+  },
+  "124_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:30:15.586194",
+    "approved_by": "user"
+  },
+  "124_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:30:27.357723",
+    "approved_by": "user"
+  },
+  "125_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:30:27.784022",
+    "approved_by": "user"
+  },
+  "125_2": {
+    "variant": "hough",
+    "date": "2025-07-22T14:30:29.065739",
+    "approved_by": "user"
+  },
+  "126_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:30:46.034670",
+    "approved_by": "user"
+  },
+  "127_1": {
+    "variant": "coarse",
+    "date": "2025-07-22T14:31:00.346785",
+    "approved_by": "user"
+  },
+  "127_2": {
+    "variant": "coarse",
+    "date": "2025-07-22T14:31:02.071941",
+    "approved_by": "user"
+  },
+  "126_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:31:13.585707",
+    "approved_by": "user"
+  },
+  "128_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:31:41.650286",
+    "approved_by": "user"
+  },
+  "128_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:32:11.933913",
+    "approved_by": "user"
+  },
+  "130_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:32:37.844801",
+    "approved_by": "user"
+  },
+  "132_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:33:01.882122",
+    "approved_by": "user"
+  },
+  "132_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:33:02.483771",
+    "approved_by": "user"
+  },
+  "134_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:33:06.748372",
+    "approved_by": "user"
+  },
+  "134_2": {
+    "variant": "hough",
+    "date": "2025-07-22T14:33:36.128958",
+    "approved_by": "user"
+  },
+  "135_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:33:56.397747",
+    "approved_by": "user"
+  },
+  "135_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:34:28.194486",
+    "approved_by": "user"
+  },
+  "136_2": {
+    "variant": "hough",
+    "date": "2025-07-22T14:34:29.870602",
+    "approved_by": "user"
+  },
+  "136_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:34:36.860381",
+    "approved_by": "user"
+  },
+  "137_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:34:56.358843",
+    "approved_by": "user"
+  },
+  "138_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:35:06.530890",
+    "approved_by": "user"
+  },
+  "138_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:35:09.759138",
+    "approved_by": "user"
+  },
+  "139_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:35:31.046693",
+    "approved_by": "user"
+  },
+  "139_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:35:49.208888",
+    "approved_by": "user"
+  },
+  "141_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:36:11.018847",
+    "approved_by": "user"
+  },
+  "141_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:36:23.412925",
+    "approved_by": "user"
+  },
+  "142_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:36:28.422535",
+    "approved_by": "user"
+  },
+  "142_2": {
+    "variant": "hough",
+    "date": "2025-07-22T14:36:30.397089",
+    "approved_by": "user"
+  },
+  "143_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:36:52.118913",
+    "approved_by": "user"
+  },
+  "145_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:37:09.559827",
+    "approved_by": "user"
+  },
+  "145_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:37:20.482642",
+    "approved_by": "user"
+  },
+  "146_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:37:47.162769",
+    "approved_by": "user"
+  },
+  "146_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:37:49.029703",
+    "approved_by": "user"
+  },
+  "147_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:38:34.164966",
+    "approved_by": "user"
+  },
+  "147_1": {
+    "variant": "manual",
+    "date": "2025-07-22T14:38:34.658517",
+    "approved_by": "user"
+  },
+  "148_2": {
+    "variant": "manual",
+    "date": "2025-07-22T14:38:52.018761",
+    "approved_by": "user"
+  },
+  "148_1": {
+    "variant": "hough",
+    "date": "2025-07-22T14:38:53.719422",
+    "approved_by": "user"
+  },
+  "166_1": {
+    "variant": "hough",
+    "date": "2025-07-23T13:17:21.433223",
+    "approved_by": "user"
+  },
+  "166_2": {
+    "variant": "manual",
+    "date": "2025-07-23T13:18:10.513801",
+    "approved_by": "user"
+  }
+}
