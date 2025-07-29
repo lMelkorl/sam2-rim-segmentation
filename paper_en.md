@@ -7,6 +7,38 @@ language: "en"
 ---
 
 # SAM2-Powered Semi-Automated Data Generation for Vehicle Rim Segmentation and Custom Model Training
+### SAM2-Assisted Rim Detection Process
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d16877a0-2ac1-4467-88c3-f9bec183d437" width="700"/>
+</p>
+<p align="center"><em>SAM2-assisted wheel detection</em></p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/121752bc-7702-4c1f-a2b3-07c51488cdd8" width="450"/>
+</p>
+<p align="center"><em>Detection of the metallic rim area using SAM2 and a custom model</em></p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b48910a7-aef9-4b23-bcf2-875f5a09d4e2" width="350"/>
+</p>
+<p align="center"><em>Segmentation result: selected metallic rim region</em></p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3c27adb9-610d-4a7e-a9c4-8703c238b512" width="45%" style="margin-right: 10px;" />
+  <img src="https://github.com/user-attachments/assets/55562864-2bad-418a-9aa6-bb6ce3b11422" width="45%" />
+</p>
+<p align="center"><em>Segmentation result: replacing the selected metallic rim region with the provided PNG rim image</em></p>
+
+---
 
 ## Abstract
 
