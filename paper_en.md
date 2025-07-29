@@ -153,7 +153,7 @@ augmentations:
 
 ### 4.1 Dataset Statistics
 
-A total of 200 rim samples were obtained from 172 vehicle images:
+A total of 200 rim samples:
 
 - **Coarse SAM2 selection**: 23.5% (47 samples)
 - **Hough Circle selection**: 58.5% (117 samples)
