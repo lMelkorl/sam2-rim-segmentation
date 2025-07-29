@@ -7,8 +7,42 @@ language: "tr"
 ---
 
 # SAM2 Destekli Yarı-Otomatik Veri Üretimi ile Jant Segmentasyonuna Yönelik Özel Model Eğitimi
+### SAM2 Destekli Jant Tespit Süreci
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d16877a0-2ac1-4467-88c3-f9bec183d437" width="700"/>
+</p>
+<p align="center"><em>SAM2 destekli tekerlek tespiti</em></p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/121752bc-7702-4c1f-a2b3-07c51488cdd8" width="450"/>
+</p>
+<p align="center"><em>SAM2 + özelleştirilmiş model ile metalik jant alanının tespiti</em></p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b48910a7-aef9-4b23-bcf2-875f5a09d4e2" width="350"/>
+</p>
+<p align="center"><em>Segmentasyon sonucu: seçilen metalik jant bölgesi</em></p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3c27adb9-610d-4a7e-a9c4-8703c238b512" width="45%" style="margin-right: 10px;" />
+  <img src="https://github.com/user-attachments/assets/55562864-2bad-418a-9aa6-bb6ce3b11422" width="45%" />
+</p>
+<p align="center"><em>Segmentation result: replacing the selected metallic rim region with the provided PNG rim visual</em></p>
+
+
+---
 
 ## Özet
+
 
 Bu çalışmada, özel yapay zekâ modelleri eğitmek amacıyla yüksek kaliteli veriseti oluşturmak için SAM2 gibi temel segmentasyon modellerinin nasıl kullanılabileceğini gösteriyoruz. Örnek uygulama olarak, araç görsellerinde sadece jant bölgesini (lastiği hariç tutarak) segmentleyen bir model geliştirdik. SAM2 modeli ile araç tekerlekleri tespit edilip kırpıldıktan sonra, bu kırpılmış alanlarda klasik görüntü işleme algoritmaları (ROI tabanlı analiz, Hough Circle tespiti vb.) kullanılarak jant maskeleri üretildi. Otomatik yöntemlerin başarısız olduğu durumlarda manuel etiketleme yapılmıştır. Bu şekilde oluşturulan yüksek doğruluklu verisetleriyle eğitilen özel model, gerçek araç görsellerinde oldukça başarılı sonuçlar vermiştir. Bu yaklaşım yalnızca jant segmentasyonu için değil, diğer birçok özel yapay zekâ modeli geliştirme senaryosuna da genellenebilir.
 
