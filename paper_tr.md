@@ -36,7 +36,7 @@ language: "tr"
   <img src="https://github.com/user-attachments/assets/3c27adb9-610d-4a7e-a9c4-8703c238b512" width="45%" style="margin-right: 10px;" />
   <img src="https://github.com/user-attachments/assets/55562864-2bad-418a-9aa6-bb6ce3b11422" width="45%" />
 </p>
-<p align="center"><em>Segmentation result: replacing the selected metallic rim region with the provided PNG rim visual</em></p>
+<p align="center"><em>Segmentasyon sonucu: seçili metalik jant bölgesinin sağlanan PNG jant görseliyle değiştirilmesi</em></p>
 
 
 ---
