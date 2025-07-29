@@ -187,7 +187,7 @@ augmentations:
 
 ### 4.1 Dataset İstatistikleri
 
-Toplamda 172 araç görselinden 200 jant örneği elde edilmiştir:
+Toplamda 200 jant örneği elde edilmiştir:
 
 - **Coarse SAM2 seçimi**: %23.5 (47 örnek)
 - **Hough Circle seçimi**: %58.5 (117 örnek)  
