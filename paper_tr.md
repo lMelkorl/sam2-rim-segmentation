@@ -308,7 +308,7 @@ Bu proje, genel AI modellerinin rehberliğinde, az sayıda ama yüksek kaliteli 
 
 **Kanıtlanan Hipotezler:**
 1. SAM2 + klasik CV algoritmalarının hibrit yaklaşımı, tek başına kullanımdan %34 daha iyi sonuç verir
-2. İnsan-in-the-loop yaklaşımı, tamamen otomatik sistemlerden %18 daha kaliteli veri üretir
+2. human-in-the-loop yaklaşımı, tamamen otomatik sistemlerden %18 daha kaliteli veri üretir
 3. 200 kaliteli örnek, 1000+ düşük kaliteli örnekten daha etkili model eğitimi sağlar
 
 ### 7.2 Gelecek Araştırma Yönleri
